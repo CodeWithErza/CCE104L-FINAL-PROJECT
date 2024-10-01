@@ -215,7 +215,7 @@ public class ManageStudents extends javax.swing.JFrame {
                 jLabel8MouseClicked(evt);
             }
         });
-        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 120, 40));
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 120, 30));
 
         jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 40));
 
@@ -382,8 +382,8 @@ public class ManageStudents extends javax.swing.JFrame {
                 "Book ID", "Name", "Author", "Quantity"
             }
         ));
-        tbl_studentDetails.setColorBackgoundHead(new java.awt.Color(204, 0, 51));
-        tbl_studentDetails.setColorBordeFilas(new java.awt.Color(204, 0, 51));
+        tbl_studentDetails.setColorBackgoundHead(new java.awt.Color(153, 0, 0));
+        tbl_studentDetails.setColorBordeFilas(new java.awt.Color(153, 0, 0));
         tbl_studentDetails.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
         tbl_studentDetails.setColorSelBackgound(new java.awt.Color(255, 51, 51));
         tbl_studentDetails.setRowHeight(25);

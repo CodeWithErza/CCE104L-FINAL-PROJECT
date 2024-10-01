@@ -405,8 +405,8 @@ public class ManageBooks extends javax.swing.JFrame {
                 "Book ID", "Name", "Author", "Quantity"
             }
         ));
-        tbl_bookDetails.setColorBackgoundHead(new java.awt.Color(204, 0, 51));
-        tbl_bookDetails.setColorBordeFilas(new java.awt.Color(204, 0, 51));
+        tbl_bookDetails.setColorBackgoundHead(new java.awt.Color(153, 0, 0));
+        tbl_bookDetails.setColorBordeFilas(new java.awt.Color(153, 0, 0));
         tbl_bookDetails.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
         tbl_bookDetails.setColorSelBackgound(new java.awt.Color(255, 51, 51));
         tbl_bookDetails.setRowHeight(25);

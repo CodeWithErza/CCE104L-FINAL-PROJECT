@@ -80,11 +80,11 @@ public void Login() {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -105,11 +105,6 @@ public void Login() {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Showcard Gothic", 0, 30)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 0, 0));
-        jLabel1.setText("um lic");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 110, 30));
-
         jLabel2.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(204, 0, 0));
         jLabel2.setText("UM");
@@ -119,13 +114,18 @@ public void Login() {
         jLabel3.setText("Library Information Center");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 20));
 
-        jLabel6.setFont(new java.awt.Font("Monotype Corsiva", 3, 36)); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/1.png"))); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 640, 630));
+
+        jLabel6.setFont(new java.awt.Font("Monotype Corsiva", 1, 48)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(204, 0, 0));
         jLabel6.setText("Welcome To");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, 170, 40));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 240, 60));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/library-3.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 640, 630));
+        jLabel1.setFont(new java.awt.Font("Showcard Gothic", 0, 40)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel1.setText("um lic");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 140, 50));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 700));
 
@@ -230,7 +230,7 @@ public void Login() {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 250, 30));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 250, 40));
 
         jLabel11.setFont(new java.awt.Font("Roboto", 1, 25)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
