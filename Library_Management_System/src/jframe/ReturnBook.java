@@ -16,12 +16,12 @@ import javax.swing.JOptionPane;
  *
  * @author Admin
  */
-public class IssueBook extends javax.swing.JFrame {
+public class ReturnBook extends javax.swing.JFrame {
 
     /**
      * Creates new form IssueBoo
      */
-    public IssueBook() {
+    public ReturnBook() {
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_BOTH);
 
@@ -184,8 +184,6 @@ public class IssueBook extends javax.swing.JFrame {
         panel_main = new javax.swing.JPanel();
         rSMaterialButtonCircle2 = new rojerusan.RSMaterialButtonCircle();
         jPanel1 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         lbl_quantity = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -197,30 +195,16 @@ public class IssueBook extends javax.swing.JFrame {
         lbl_author = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         lbl_bookError = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
-        lbl_program = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        lbl_studentId = new javax.swing.JLabel();
-        lbl_studentName = new javax.swing.JLabel();
-        lbl_department = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        lbl_studentError = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         txt_bookId = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         txt_studentId = new javax.swing.JTextField();
-        date_issueDate = new rojeru_san.componentes.RSDateChooser();
         jLabel11 = new javax.swing.JLabel();
-        date_dueDate = new rojeru_san.componentes.RSDateChooser();
-        jLabel19 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -230,33 +214,16 @@ public class IssueBook extends javax.swing.JFrame {
         panel_main.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         rSMaterialButtonCircle2.setBackground(new java.awt.Color(204, 0, 0));
-        rSMaterialButtonCircle2.setText("ISSUE BOOK");
+        rSMaterialButtonCircle2.setText("RETURN BOOK");
         rSMaterialButtonCircle2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rSMaterialButtonCircle2ActionPerformed(evt);
             }
         });
-        panel_main.add(rSMaterialButtonCircle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 550, 360, 60));
+        panel_main.add(rSMaterialButtonCircle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 380, 360, 60));
 
         jPanel1.setBackground(new java.awt.Color(153, 0, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel4.setBackground(new java.awt.Color(255, 51, 51));
-        jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel8.setFont(new java.awt.Font("Verdana", 0, 17)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Rewind_48px.png"))); // NOI18N
-        jLabel8.setText("Back");
-        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel8MouseClicked(evt);
-            }
-        });
-        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 120, 30));
-
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 40));
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 22)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -319,79 +286,13 @@ public class IssueBook extends javax.swing.JFrame {
         lbl_bookError.setForeground(new java.awt.Color(255, 255, 0));
         jPanel1.add(lbl_bookError, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 520, 270, 30));
 
-        panel_main.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 830));
-
-        jPanel3.setBackground(new java.awt.Color(51, 0, 153));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 5, Short.MAX_VALUE)
-        );
-
-        jPanel3.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 260, 5));
-
-        lbl_program.setFont(new java.awt.Font("Yu Gothic UI", 0, 20)); // NOI18N
-        lbl_program.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel3.add(lbl_program, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 440, 170, 30));
-
-        jLabel14.setFont(new java.awt.Font("Yu Gothic UI", 0, 20)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("Student ID:");
-        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 100, 30));
-
-        jLabel15.setFont(new java.awt.Font("Yu Gothic UI", 0, 20)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("Student name:");
-        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 130, 30));
-
-        jLabel16.setFont(new java.awt.Font("Yu Gothic UI", 0, 20)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setText("Department:");
-        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 110, 30));
-
-        jLabel17.setFont(new java.awt.Font("Yu Gothic UI", 0, 20)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel17.setText("Program:");
-        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, 110, 30));
-
-        lbl_studentId.setFont(new java.awt.Font("Yu Gothic UI", 0, 20)); // NOI18N
-        lbl_studentId.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel3.add(lbl_studentId, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 170, 30));
-
-        lbl_studentName.setFont(new java.awt.Font("Yu Gothic UI", 0, 20)); // NOI18N
-        lbl_studentName.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel3.add(lbl_studentName, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, 170, 30));
-
-        lbl_department.setFont(new java.awt.Font("Yu Gothic UI", 0, 20)); // NOI18N
-        lbl_department.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel3.add(lbl_department, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 390, 170, 30));
-
-        jLabel13.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 22)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Student_Registration_100px_2.png"))); // NOI18N
-        jLabel13.setText("  Student Details");
-        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 300, 110));
-
-        lbl_studentError.setFont(new java.awt.Font("Yu Gothic UI", 1, 20)); // NOI18N
-        lbl_studentError.setForeground(new java.awt.Color(255, 255, 0));
-        jPanel3.add(lbl_studentError, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 270, 30));
-
-        panel_main.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 0, 400, 830));
+        panel_main.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 390, 830));
 
         jLabel12.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 22)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(204, 0, 0));
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Books_52px_1.png"))); // NOI18N
-        jLabel12.setText("  Issue Book");
-        panel_main.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 110, 200, 120));
+        jLabel12.setText("Return Book");
+        panel_main.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 110, 200, 120));
 
         jPanel7.setBackground(new java.awt.Color(153, 0, 0));
 
@@ -406,7 +307,7 @@ public class IssueBook extends javax.swing.JFrame {
             .addGap(0, 5, Short.MAX_VALUE)
         );
 
-        panel_main.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 200, 350, 5));
+        panel_main.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 200, 350, 5));
 
         jPanel8.setBackground(new java.awt.Color(255, 51, 51));
         jPanel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -449,17 +350,12 @@ public class IssueBook extends javax.swing.JFrame {
                 txt_bookIdActionPerformed(evt);
             }
         });
-        panel_main.add(txt_bookId, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 240, 270, 40));
+        panel_main.add(txt_bookId, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 240, 270, 40));
 
         jLabel9.setFont(new java.awt.Font("Roboto", 1, 17)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(204, 0, 0));
         jLabel9.setText("Book ID :");
-        panel_main.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 250, 110, 30));
-
-        jLabel10.setFont(new java.awt.Font("Roboto", 1, 17)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel10.setText("Issue Date :");
-        panel_main.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 400, 100, 30));
+        panel_main.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 250, 110, 30));
 
         txt_studentId.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         txt_studentId.setForeground(new java.awt.Color(153, 153, 153));
@@ -486,39 +382,29 @@ public class IssueBook extends javax.swing.JFrame {
                 txt_studentIdActionPerformed(evt);
             }
         });
-        panel_main.add(txt_studentId, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 310, 270, 40));
-
-        date_issueDate.setForeground(new java.awt.Color(204, 0, 0));
-        date_issueDate.setColorBackground(new java.awt.Color(204, 0, 0));
-        date_issueDate.setColorForeground(new java.awt.Color(204, 0, 0));
-        date_issueDate.setPlaceholder("Select Issue Date");
-        date_issueDate.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                date_issueDateFocusGained(evt);
-            }
-        });
-        panel_main.add(date_issueDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 390, 270, -1));
+        panel_main.add(txt_studentId, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 310, 270, 40));
 
         jLabel11.setFont(new java.awt.Font("Roboto", 1, 17)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(204, 0, 0));
         jLabel11.setText("Student ID :");
-        panel_main.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 320, 110, 30));
+        panel_main.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 320, 110, 30));
 
-        date_dueDate.setForeground(new java.awt.Color(204, 0, 0));
-        date_dueDate.setColorBackground(new java.awt.Color(204, 0, 0));
-        date_dueDate.setColorForeground(new java.awt.Color(204, 0, 0));
-        date_dueDate.setPlaceholder("Select Due Date");
-        date_dueDate.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                date_dueDateFocusGained(evt);
+        jPanel4.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel8.setFont(new java.awt.Font("Verdana", 0, 17)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Rewind_48px.png"))); // NOI18N
+        jLabel8.setText("Back");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
             }
         });
-        panel_main.add(date_dueDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 460, 270, -1));
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 120, 30));
 
-        jLabel19.setFont(new java.awt.Font("Roboto", 1, 17)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel19.setText("Due Date :");
-        panel_main.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 470, 100, 30));
+        panel_main.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 40));
 
         getContentPane().add(panel_main, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 820));
 
@@ -584,14 +470,6 @@ public class IssueBook extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_studentIdActionPerformed
 
-    private void date_issueDateFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_date_issueDateFocusGained
-
-    }//GEN-LAST:event_date_issueDateFocusGained
-
-    private void date_dueDateFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_date_dueDateFocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_date_dueDateFocusGained
-
     private void rSMaterialButtonCircle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle2ActionPerformed
         if (lbl_quantity.getText().equals("0")) {
             JOptionPane.showMessageDialog(this,"Book is Not Available");
@@ -629,38 +507,30 @@ public class IssueBook extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(IssueBook.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ReturnBook.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(IssueBook.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ReturnBook.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(IssueBook.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ReturnBook.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(IssueBook.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ReturnBook.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new IssueBook().setVisible(true);
+                new ReturnBook().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private rojeru_san.componentes.RSDateChooser date_dueDate;
-    private rojeru_san.componentes.RSDateChooser date_issueDate;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -669,21 +539,14 @@ public class IssueBook extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JLabel lbl_author;
     private javax.swing.JLabel lbl_bookError;
     private javax.swing.JLabel lbl_bookId;
     private javax.swing.JLabel lbl_bookName;
-    private javax.swing.JLabel lbl_department;
-    private javax.swing.JLabel lbl_program;
     private javax.swing.JLabel lbl_quantity;
-    private javax.swing.JLabel lbl_studentError;
-    private javax.swing.JLabel lbl_studentId;
-    private javax.swing.JLabel lbl_studentName;
     private javax.swing.JPanel panel_main;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle2;
     private javax.swing.JTextField txt_bookId;

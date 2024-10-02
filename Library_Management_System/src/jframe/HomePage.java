@@ -285,7 +285,7 @@ public class HomePage extends javax.swing.JFrame {
                 jLabel12MouseExited(evt);
             }
         });
-        jPanel10.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 6, 170, 40));
+        jPanel10.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 6, 130, 40));
 
         jPanel3.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, -1, 60));
 
@@ -340,7 +340,7 @@ public class HomePage extends javax.swing.JFrame {
         jLabel14.setForeground(new java.awt.Color(153, 153, 153));
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Return_Purchase_26px.png"))); // NOI18N
         jLabel14.setText("  Return Book");
-        jPanel12.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 180, -1));
+        jPanel12.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 150, -1));
 
         jPanel13.setBackground(new java.awt.Color(51, 51, 51));
         jPanel13.setFocusCycleRoot(true);
