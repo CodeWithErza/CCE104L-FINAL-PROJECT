@@ -172,8 +172,8 @@ public class ReturnBook extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 22)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(204, 0, 0));
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Books_52px_1.png"))); // NOI18N
-        jLabel12.setText("Return Book");
-        panel_main.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 110, 200, 120));
+        jLabel12.setText("  Return Book");
+        panel_main.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 110, 200, 120));
 
         jPanel1.setBackground(new java.awt.Color(153, 0, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -246,7 +246,7 @@ public class ReturnBook extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Literature_100px_1.png"))); // NOI18N
         jLabel1.setText("  Book Details");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 260, 90));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 250, 90));
 
         jPanel4.setBackground(new java.awt.Color(255, 51, 51));
         jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -365,7 +365,7 @@ public class ReturnBook extends javax.swing.JFrame {
         panel_main.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 310, 110, 30));
 
         rSMaterialButtonCircle3.setBackground(new java.awt.Color(0, 0, 204));
-        rSMaterialButtonCircle3.setText("FIND");
+        rSMaterialButtonCircle3.setText("FIND DETAILS");
         rSMaterialButtonCircle3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rSMaterialButtonCircle3ActionPerformed(evt);
@@ -377,7 +377,7 @@ public class ReturnBook extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI", 0, 20)); // NOI18N
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/library-2.png"))); // NOI18N
         jLabel3.setText("Book ID:");
-        panel_main.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-50, 350, 980, 430));
+        panel_main.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 350, 970, 430));
 
         jPanel3.setBackground(new java.awt.Color(153, 0, 0));
 

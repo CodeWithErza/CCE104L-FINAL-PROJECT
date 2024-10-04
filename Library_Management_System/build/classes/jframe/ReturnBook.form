@@ -70,11 +70,11 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/AddNewBookIcons/icons8_Books_52px_1.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Return Book"/>
+            <Property name="text" type="java.lang.String" value="  Return Book"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="1070" y="110" width="200" height="120"/>
+              <AbsoluteConstraints x="1060" y="110" width="200" height="120"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -304,7 +304,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="310" y="10" width="260" height="90"/>
+                  <AbsoluteConstraints x="360" y="10" width="250" height="90"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -525,7 +525,7 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="0" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="FIND"/>
+            <Property name="text" type="java.lang.String" value="FIND DETAILS"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rSMaterialButtonCircle3ActionPerformed"/>
@@ -551,7 +551,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="-50" y="350" width="980" height="430"/>
+              <AbsoluteConstraints x="-40" y="350" width="970" height="430"/>
             </Constraint>
           </Constraints>
         </Component>
