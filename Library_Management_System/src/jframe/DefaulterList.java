@@ -4,8 +4,11 @@
  */
 package jframe;
 
+import com.mysql.cj.MysqlType;
+import com.sun.jdi.connect.spi.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.util.Date;
 import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
 import static jframe.DBConnection.con;
@@ -14,47 +17,49 @@ import static jframe.DBConnection.con;
  *
  * @author Admin
  */
-public class IssueBookDetails extends javax.swing.JFrame {
+public class DefaulterList extends javax.swing.JFrame {
 
     /**
      * Creates new form IssueBookDetails
      */
     DefaultTableModel model;
-    public IssueBookDetails() {
+    public DefaulterList() {
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setIssueBookDetailsToTable();
         
 
     }
-    public void setIssueBookDetailsToTable(){
+public void setIssueBookDetailsToTable() {
+    long l = System.currentTimeMillis();
+    java.util.Date todaysDate = new java.util.Date(l);
+    java.sql.Date sqlTodaysDate = new java.sql.Date(todaysDate.getTime()); // Convert to java.sql.Date
+    
+    try {
+        Class.forName("com.mysql.jdbc.Driver");
+        java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library_ms", "root", "");
+        java.sql.PreparedStatement pst = con.prepareStatement("select * from issue_book_details where due_date < ? and status = ?");
+        pst.setDate(1, sqlTodaysDate);  // Use the java.sql.Date object here
+        pst.setString(2, "pending");
+        ResultSet rs = pst.executeQuery();
         
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library_ms", "root", "");
-            java.sql.Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("select * from issue_book_details where status = '"+"pending"+"'");
-            
-            
-            while(rs.next()){
-                String id = rs.getString("id");
-                String bookName = rs.getString("book_name");
-                String studentName = rs.getString("student_name");
-                String issueDate = rs.getString("issue_date");
-                String dueDate = rs.getString("due_date");
-                String status = rs.getString("status");
+        while(rs.next()) {
+            String id = rs.getString("id");
+            String bookName = rs.getString("book_name");
+            String studentName = rs.getString("student_name");
+            String issueDate = rs.getString("issue_date");
+            String dueDate = rs.getString("due_date");
+            String status = rs.getString("status");
 
-                Object[] obj = {id, bookName, studentName, issueDate, dueDate, status};
-                model = (DefaultTableModel) tbl_issueBookDetails.getModel();
-                model.addRow(obj);
-
-
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+            Object[] obj = {id, bookName, studentName, issueDate, dueDate, status};
+            model = (DefaultTableModel) tbl_issueBookDetails.getModel();
+            model.addRow(obj);
         }
-        
+    } catch (Exception e) {
+        e.printStackTrace();
     }
+}
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -77,7 +82,6 @@ public class IssueBookDetails extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1370, 830));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1370, 830));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -85,9 +89,9 @@ public class IssueBookDetails extends javax.swing.JFrame {
 
         jLabel12.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 22)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Books_52px_1.png"))); // NOI18N
-        jLabel12.setText(" Issued Book Details");
-        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 40, 270, 120));
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Edit_Property_50px.png"))); // NOI18N
+        jLabel12.setText("  Defaulter List");
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 40, 270, 120));
 
         jPanel7.setBackground(new java.awt.Color(153, 0, 0));
 
@@ -198,20 +202,21 @@ public class IssueBookDetails extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(IssueBookDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DefaulterList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(IssueBookDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DefaulterList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(IssueBookDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DefaulterList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(IssueBookDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DefaulterList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new IssueBookDetails().setVisible(true);
+                new DefaulterList().setVisible(true);
             }
         });
     }

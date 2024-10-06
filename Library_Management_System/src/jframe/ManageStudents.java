@@ -335,7 +335,7 @@ public class ManageStudents extends javax.swing.JFrame {
         jPanel1.add(rSMaterialButtonCircle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 570, 110, 60));
 
         combo_program.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        combo_program.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BSIT", "BSIS", "BSCS", "BSED", "BSA", "" }));
+        combo_program.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BSIT", "BSIS", "BSCS", "BSED", "BSA", "BSTM" }));
         combo_program.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 combo_programActionPerformed(evt);

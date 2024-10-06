@@ -363,7 +363,7 @@
                 <StringItem index="2" value="BSCS"/>
                 <StringItem index="3" value="BSED"/>
                 <StringItem index="4" value="BSA"/>
-                <StringItem index="5" value=""/>
+                <StringItem index="5" value="BSTM"/>
               </StringArray>
             </Property>
           </Properties>

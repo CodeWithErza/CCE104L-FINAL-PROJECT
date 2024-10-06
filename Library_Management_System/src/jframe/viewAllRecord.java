@@ -13,7 +13,6 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import static jframe.DBConnection.con;
-
 /**
  *
  * @author Admin
@@ -64,31 +63,39 @@ public class viewAllRecord extends javax.swing.JFrame {
         model.setRowCount(0);
     }
     
-    //TO SEARCH BOOK
-    public void search(){
-        Date uFromDate = date_fromDate.getDatoFecha();
-        Date uToDate = date_toDate.getDatoFecha();
+// TO SEARCH BOOK
+public void search() {
+    Date uFromDate = date_fromDate.getDatoFecha();
+    Date uToDate = date_toDate.getDatoFecha();
 
-        Long fromDate = uFromDate.getTime();
-        Long toDate = uToDate.getTime();
+    // Correct variable names
+    long fromTime = uFromDate.getTime();
+    long toTime = uToDate.getTime();
 
-        java.sql.Date sfromDate = new java.sql.Date(fromDate);
-        java.sql.Date stoDate = new java.sql.Date(toDate);
-    
+    // Create SQL Date objects
+    java.sql.Date sfromDate = new java.sql.Date(fromTime);
+    java.sql.Date stoDate = new java.sql.Date(toTime);
+
     try {
-            java.sql.Connection con = DBConnection.getConnection();
-            String sql = "select * from issue_book_details where issue_date BETWEEN ? and ?";
-            
-            PreparedStatement pst = con.prepareStatement(sql);
-            pst.setDate(1, sfromDate);
-            pst.setDate(2, stoDate);
-            
-            ResultSet rs = pst.executeQuery();
-            if(rs.next()== false){
-                JOptionPane.showMessageDialog(this, "No Record Found");              
-            }else{
-                
-            while(rs.next()){
+        java.sql.Connection con = DBConnection.getConnection();
+        String sql = "SELECT * FROM issue_book_details WHERE issue_date BETWEEN ? AND ?";
+        
+        PreparedStatement pst = con.prepareStatement(sql);
+        pst.setDate(1, sfromDate);
+        pst.setDate(2, stoDate);
+
+        ResultSet rs = pst.executeQuery();
+
+        // Check if no records are found
+        if (!rs.next()) {
+            JOptionPane.showMessageDialog(this, "No Record Found");
+        } else {
+            DefaultTableModel model = (DefaultTableModel) tbl_issueBookDetails.getModel();
+
+            // Reset table before adding new rows
+            model.setRowCount(0);
+
+            do {
                 String id = rs.getString("id");
                 String bookName = rs.getString("book_name");
                 String studentName = rs.getString("student_name");
@@ -97,17 +104,15 @@ public class viewAllRecord extends javax.swing.JFrame {
                 String status = rs.getString("status");
 
                 Object[] obj = {id, bookName, studentName, issueDate, dueDate, status};
-                model = (DefaultTableModel) tbl_issueBookDetails.getModel();
-                model.addRow(obj);                       
-            }
-                     
-            }
-            
+                model.addRow(obj);
+            } while (rs.next()); // Loop through all rows
+        }
+
     } catch (Exception e) {
         e.printStackTrace();
     }
-    
-}   
+}
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -129,6 +134,7 @@ public class viewAllRecord extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         panel_table = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbl_issueBookDetails = new rojerusan.RSTableMetro();
@@ -153,13 +159,13 @@ public class viewAllRecord extends javax.swing.JFrame {
             .addGap(0, 5, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 840, 5));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 840, 5));
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 22)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Literature_100px_1.png"))); // NOI18N
         jLabel1.setText("  View All Records");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 300, 90));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 40, 300, 90));
 
         date_fromDate.setForeground(new java.awt.Color(204, 0, 0));
         date_fromDate.setColorBackground(new java.awt.Color(204, 0, 0));
@@ -170,17 +176,17 @@ public class viewAllRecord extends javax.swing.JFrame {
                 date_fromDateFocusGained(evt);
             }
         });
-        jPanel1.add(date_fromDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 270, -1));
+        jPanel1.add(date_fromDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, 270, -1));
 
         jLabel9.setFont(new java.awt.Font("Roboto", 1, 17)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Issue Date:");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 110, 30));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 110, 30));
 
         jLabel10.setFont(new java.awt.Font("Roboto", 1, 17)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Issue Date:");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 150, 110, 30));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 180, 110, 30));
 
         date_toDate.setForeground(new java.awt.Color(204, 0, 0));
         date_toDate.setColorBackground(new java.awt.Color(204, 0, 0));
@@ -191,9 +197,10 @@ public class viewAllRecord extends javax.swing.JFrame {
                 date_toDateFocusGained(evt);
             }
         });
-        jPanel1.add(date_toDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 160, 270, -1));
+        jPanel1.add(date_toDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, 270, -1));
 
         jButton1.setBackground(new java.awt.Color(204, 0, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setText("SEARCH");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -201,7 +208,7 @@ public class viewAllRecord extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 150, 210, 40));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 170, 210, 40));
 
         jPanel8.setBackground(new java.awt.Color(255, 51, 51));
         jPanel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -236,7 +243,23 @@ public class viewAllRecord extends javax.swing.JFrame {
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 120, 40));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 220));
+        jButton2.setBackground(new java.awt.Color(204, 0, 0));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton2.setText("ALL");
+        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 230, 210, 40));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 300));
 
         panel_table.setBackground(new java.awt.Color(255, 255, 255));
         panel_table.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -262,11 +285,11 @@ public class viewAllRecord extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(tbl_issueBookDetails);
 
-        panel_table.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, 860, 430));
+        panel_table.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 860, 430));
 
         getContentPane().add(panel_table, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 1370, 700));
 
-        setBounds(0, 0, 1370, 824);
+        setBounds(0, 0, 1370, 830);
     }// </editor-fold>//GEN-END:initComponents
 
     private void date_fromDateFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_date_fromDateFocusGained
@@ -278,9 +301,14 @@ public class viewAllRecord extends javax.swing.JFrame {
     }//GEN-LAST:event_date_toDateFocusGained
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        clearTable();
-        search();
-      
+        if (date_fromDate.getDatoFecha() != null && date_toDate.getDatoFecha() != null) {
+        
+            clearTable();
+            search();
+        }else{
+             JOptionPane.showMessageDialog(this, "Please select a date");
+        
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void tbl_issueBookDetailsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbl_issueBookDetailsMouseClicked
@@ -297,6 +325,14 @@ public class viewAllRecord extends javax.swing.JFrame {
         home.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        setIssueBookDetailsToTable();
+    }//GEN-LAST:event_jButton2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -337,6 +373,7 @@ public class viewAllRecord extends javax.swing.JFrame {
     private rojeru_san.componentes.RSDateChooser date_fromDate;
     private rojeru_san.componentes.RSDateChooser date_toDate;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel18;
