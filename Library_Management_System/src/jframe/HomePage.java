@@ -20,6 +20,8 @@ import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PiePlot;
 import org.jfree.data.general.DefaultPieDataset;
+import java.text.SimpleDateFormat;
+
 
 /**
  *
@@ -99,7 +101,10 @@ public class HomePage extends javax.swing.JFrame {
         ResultSet rs = null;
         
         long l = System.currentTimeMillis();
-        Date todaysDate = new Date();
+        
+        Date todaysDate = new Date(l);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String todaysDateStr = sdf.format(todaysDate);
         
         try {
             java.sql.Connection con = DBConnection.getConnection();
@@ -116,6 +121,9 @@ public class HomePage extends javax.swing.JFrame {
             rs.last();
             lbl_issueBooks.setText(Integer.toString(rs.getRow()));
             
+            rs = st.executeQuery("select * from issue_book_details where due_date < '"+todaysDateStr+"'");
+            rs.last();
+            lbl_defaulterList.setText(Integer.toString(rs.getRow()));
                     
         } catch (Exception e) {
             e.printStackTrace();
@@ -126,13 +134,25 @@ public class HomePage extends javax.swing.JFrame {
         
         //create dataset
       DefaultPieDataset barDataset = new DefaultPieDataset( );
-      barDataset.setValue("-----" , Double.valueOf(20));  
-      barDataset.setValue("-----" , Double.valueOf(20));   
-      barDataset.setValue("-----" , Double.valueOf(40));    
-      barDataset.setValue("-----" , Double.valueOf(10));  
+      
+        try {
+            Connection con = DBConnection.getConnection();
+            String sql = "select book_name, count(*) as issue_count from issue_book_details group by book_id";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                barDataset.setValue(rs.getString("book_name") , new Double(rs.getDouble("issue_count")));  
+                
+            }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+  
       
       //create chart
-       JFreeChart piechart = ChartFactory.createPieChart("BOOK CHART",barDataset, false,true,false);//explain
+       JFreeChart piechart = ChartFactory.createPieChart("Issue Book Chart",barDataset, false,true,false);//explain
       
         PiePlot piePlot =(PiePlot) piechart.getPlot();
       
@@ -592,6 +612,7 @@ public class HomePage extends javax.swing.JFrame {
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 240, 960));
 
+        jPanel22.setBackground(new java.awt.Color(255, 255, 255));
         jPanel22.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 20)); // NOI18N
         jPanel22.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
