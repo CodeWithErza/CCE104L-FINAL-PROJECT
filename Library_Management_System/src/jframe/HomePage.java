@@ -152,7 +152,7 @@ public class HomePage extends javax.swing.JFrame {
   
       
       //create chart
-       JFreeChart piechart = ChartFactory.createPieChart("Issue Book Chart",barDataset, false,true,false);//explain
+       JFreeChart piechart = ChartFactory.createPieChart("Issued Book Chart",barDataset, false,true,false);//explain
       
         PiePlot piePlot =(PiePlot) piechart.getPlot();
       
