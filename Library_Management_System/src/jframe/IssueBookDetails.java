@@ -77,7 +77,6 @@ public class IssueBookDetails extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1370, 830));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1370, 830));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -87,7 +86,7 @@ public class IssueBookDetails extends javax.swing.JFrame {
         jLabel12.setForeground(new java.awt.Color(204, 0, 0));
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Books_52px_1.png"))); // NOI18N
         jLabel12.setText(" Issued Book Details");
-        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 40, 270, 120));
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 270, 120));
 
         jPanel7.setBackground(new java.awt.Color(153, 0, 0));
 
@@ -102,7 +101,7 @@ public class IssueBookDetails extends javax.swing.JFrame {
             .addGap(0, 5, Short.MAX_VALUE)
         );
 
-        jPanel2.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 350, 5));
+        jPanel2.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, 350, 5));
 
         jPanel8.setBackground(new java.awt.Color(255, 51, 51));
         jPanel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -160,7 +159,7 @@ public class IssueBookDetails extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(tbl_issueBookDetails);
 
-        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 860, 430));
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 860, 430));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 830));
 

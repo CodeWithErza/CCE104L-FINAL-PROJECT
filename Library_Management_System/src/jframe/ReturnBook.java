@@ -263,7 +263,7 @@ public class ReturnBook extends javax.swing.JFrame {
         });
         jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 120, 30));
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 120, 40));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 120, 40));
 
         panel_main.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 940, 350));
 
@@ -377,7 +377,7 @@ public class ReturnBook extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI", 0, 20)); // NOI18N
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/library-2.png"))); // NOI18N
         jLabel3.setText("Book ID:");
-        panel_main.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 350, 970, 430));
+        panel_main.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 340, 960, 480));
 
         jPanel3.setBackground(new java.awt.Color(153, 0, 0));
 

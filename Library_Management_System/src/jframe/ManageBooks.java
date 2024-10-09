@@ -194,7 +194,7 @@ public class ManageBooks extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(202, 58, 58));
+        jPanel1.setBackground(new java.awt.Color(184, 0, 31));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 51, 51));
@@ -220,7 +220,7 @@ public class ManageBooks extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 40));
 
-        txt_bookId.setBackground(new java.awt.Color(202, 58, 58));
+        txt_bookId.setBackground(new java.awt.Color(184, 0, 31));
         txt_bookId.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         txt_bookId.setForeground(new java.awt.Color(153, 153, 153));
         txt_bookId.setText("Enter Book ID");
@@ -268,7 +268,7 @@ public class ManageBooks extends javax.swing.JFrame {
         jLabel10.setText("Enter Book name:");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 140, 30));
 
-        txt_bookName.setBackground(new java.awt.Color(202, 58, 58));
+        txt_bookName.setBackground(new java.awt.Color(184, 0, 31));
         txt_bookName.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         txt_bookName.setForeground(new java.awt.Color(153, 153, 153));
         txt_bookName.setText("Enter Book name");
@@ -299,7 +299,7 @@ public class ManageBooks extends javax.swing.JFrame {
         jLabel11.setText("Author name:");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 370, 120, 30));
 
-        txt_authorName.setBackground(new java.awt.Color(202, 58, 58));
+        txt_authorName.setBackground(new java.awt.Color(184, 0, 31));
         txt_authorName.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         txt_authorName.setForeground(new java.awt.Color(153, 153, 153));
         txt_authorName.setText("Enter Author name");
@@ -325,7 +325,7 @@ public class ManageBooks extends javax.swing.JFrame {
         jLabel12.setText("Quantity:");
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 470, 90, 30));
 
-        txt_quantity.setBackground(new java.awt.Color(202, 58, 58));
+        txt_quantity.setBackground(new java.awt.Color(184, 0, 31));
         txt_quantity.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         txt_quantity.setForeground(new java.awt.Color(153, 153, 153));
         txt_quantity.setText("Enter Quantity");
@@ -351,14 +351,16 @@ public class ManageBooks extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Unit_26px.png"))); // NOI18N
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 50, 40));
 
+        rSMaterialButtonCircle1.setBackground(new java.awt.Color(255, 102, 0));
         rSMaterialButtonCircle1.setText("DELETE");
         rSMaterialButtonCircle1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rSMaterialButtonCircle1ActionPerformed(evt);
             }
         });
-        jPanel1.add(rSMaterialButtonCircle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 570, 110, 60));
+        jPanel1.add(rSMaterialButtonCircle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 570, 110, 60));
 
+        rSMaterialButtonCircle2.setBackground(new java.awt.Color(255, 102, 0));
         rSMaterialButtonCircle2.setText("ADD");
         rSMaterialButtonCircle2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -367,6 +369,7 @@ public class ManageBooks extends javax.swing.JFrame {
         });
         jPanel1.add(rSMaterialButtonCircle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 570, 110, 60));
 
+        rSMaterialButtonCircle3.setBackground(new java.awt.Color(255, 102, 0));
         rSMaterialButtonCircle3.setText("UPDATE");
         rSMaterialButtonCircle3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -377,7 +380,7 @@ public class ManageBooks extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, 830));
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBackground(new java.awt.Color(255, 248, 232));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel6.setBackground(new java.awt.Color(255, 51, 51));
@@ -395,6 +398,8 @@ public class ManageBooks extends javax.swing.JFrame {
         jPanel6.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 30, 30));
 
         jPanel3.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 0, 103, 42));
+
+        jScrollPane2.setBackground(new java.awt.Color(255, 248, 232));
 
         tbl_bookDetails.setBackground(new java.awt.Color(204, 204, 204));
         tbl_bookDetails.setModel(new javax.swing.table.DefaultTableModel(
@@ -417,14 +422,14 @@ public class ManageBooks extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(tbl_bookDetails);
 
-        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 630, 270));
+        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 630, 370));
 
         jLabel1.setBackground(new java.awt.Color(0, 112, 192));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Books_52px_1.png"))); // NOI18N
         jLabel1.setText("MANAGE BOOKS");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 310, 40));
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, 310, 70));
 
         jPanel5.setBackground(new java.awt.Color(204, 0, 0));
 

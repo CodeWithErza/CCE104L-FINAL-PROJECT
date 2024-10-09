@@ -5,12 +5,12 @@
 package jframe;
 
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.Statement; 
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.PreparedStatement;
 import java.util.Date;
 import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
@@ -96,40 +96,59 @@ public class HomePage extends javax.swing.JFrame {
         }
         
     }
-    public void setDataToCards(){
+    public void setDataToCards() {
         Statement st = null;
         ResultSet rs = null;
-        
+
         long l = System.currentTimeMillis();
-        
         Date todaysDate = new Date(l);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String todaysDateStr = sdf.format(todaysDate);
-        
+
         try {
             java.sql.Connection con = DBConnection.getConnection();
+
+            // Counting books
             st = con.createStatement();
-            rs = st.executeQuery("select * from book_details");
-            rs.last();
-            lbl_noOfBooks.setText(Integer.toString(rs.getRow()));
-            
-            rs = st.executeQuery("select * from student_details");
-            rs.last();
-            lbl_noOfStudents.setText(Integer.toString(rs.getRow()));
-            
-            rs = st.executeQuery("select * from issue_book_details");
-            rs.last();
-            lbl_issueBooks.setText(Integer.toString(rs.getRow()));
-            
-            rs = st.executeQuery("select * from issue_book_details where due_date < '"+todaysDateStr+"'");
-            rs.last();
-            lbl_defaulterList.setText(Integer.toString(rs.getRow()));
-                    
+            rs = st.executeQuery("select count(*) as count from book_details");
+            if (rs.next()) {
+                lbl_noOfBooks.setText(Integer.toString(rs.getInt("count")));
+            }
+
+            // Counting students
+            rs = st.executeQuery("select count(*) as count from student_details");
+            if (rs.next()) {
+                lbl_noOfStudents.setText(Integer.toString(rs.getInt("count")));
+            }
+
+            // Counting issued books
+            rs = st.executeQuery("select count(*) as count from issue_book_details");
+            if (rs.next()) {
+                lbl_issueBooks.setText(Integer.toString(rs.getInt("count")));
+            }
+
+            // Counting defaulters (pending books with overdue date)
+            String sql = "select count(*) as count from issue_book_details where due_date < ? and status = ?";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, todaysDateStr);
+            ps.setString(2, "pending");
+            rs = ps.executeQuery();
+            if (rs.next()) {
+                lbl_defaulterList.setText(Integer.toString(rs.getInt("count")));
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (rs != null) rs.close();
+                if (st != null) st.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
-         
     }
+
     public void showPieChart(){
         
         //create dataset
@@ -157,9 +176,9 @@ public class HomePage extends javax.swing.JFrame {
         PiePlot piePlot =(PiePlot) piechart.getPlot();
       
        //changing pie chart blocks colors
-       piePlot.setSectionPaint("-----", new Color(255,255,102));
-        piePlot.setSectionPaint("-----", new Color(102,255,102));
-        piePlot.setSectionPaint("----", new Color(255,102,153));
+       piePlot.setSectionPaint("-----", new Color (128, 0, 0));
+        piePlot.setSectionPaint("-----", new Color (152, 43, 28));
+        piePlot.setSectionPaint("----", new Color(128, 0, 0));
         piePlot.setSectionPaint("-----", new Color(0,204,204));
       
        
@@ -260,10 +279,10 @@ public class HomePage extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 5, 50));
 
-        jLabel3.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 20)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Sylfaen", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Library Management System");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 240, 30));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 310, 30));
 
         jLabel4.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));

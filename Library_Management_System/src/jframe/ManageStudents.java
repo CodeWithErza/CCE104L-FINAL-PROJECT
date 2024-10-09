@@ -195,7 +195,7 @@ public class ManageStudents extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(202, 58, 58));
+        jPanel1.setBackground(new java.awt.Color(184, 0, 31));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 51, 51));
@@ -221,7 +221,7 @@ public class ManageStudents extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 40));
 
-        txt_studentId.setBackground(new java.awt.Color(202, 58, 58));
+        txt_studentId.setBackground(new java.awt.Color(184, 0, 31));
         txt_studentId.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         txt_studentId.setForeground(new java.awt.Color(153, 153, 153));
         txt_studentId.setText("Enter Student ID");
@@ -269,7 +269,7 @@ public class ManageStudents extends javax.swing.JFrame {
         jLabel10.setText("Enter Student Name:");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 160, 30));
 
-        txt_studentName.setBackground(new java.awt.Color(202, 58, 58));
+        txt_studentName.setBackground(new java.awt.Color(184, 0, 31));
         txt_studentName.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         txt_studentName.setForeground(new java.awt.Color(153, 153, 153));
         txt_studentName.setText("Enter Student Name");
@@ -334,7 +334,7 @@ public class ManageStudents extends javax.swing.JFrame {
         });
         jPanel1.add(rSMaterialButtonCircle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 570, 110, 60));
 
-        combo_program.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        combo_program.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
         combo_program.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BSIT", "BSIS", "BSCS", "BSED", "BSA", "BSTM" }));
         combo_program.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -343,7 +343,7 @@ public class ManageStudents extends javax.swing.JFrame {
         });
         jPanel1.add(combo_program, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 510, 260, 30));
 
-        combo_dept.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        combo_dept.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
         combo_dept.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CCE", "CHE", "CAE", "CJE", "CASE", " " }));
         combo_dept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

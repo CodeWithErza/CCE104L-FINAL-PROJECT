@@ -92,11 +92,11 @@ public void Login() {
         jTextField1 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
+        jTextField2 = new rojerusan.RSPasswordTextPlaceHolder();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -147,15 +147,15 @@ public void Login() {
         });
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 20, 20));
 
-        jLabel8.setFont(new java.awt.Font("Roboto", 0, 17)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Dubai Medium", 0, 17)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Welcome, Login to your Account");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 250, 30));
+        jLabel8.setText("Welcome,  Login to your Account");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 240, 30));
 
         jTextField1.setBackground(new java.awt.Color(102, 0, 0));
         jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField1.setText("Enter Username");
+        jTextField1.setText(" Enter Username");
         jTextField1.setToolTipText("");
         jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField1.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -183,26 +183,6 @@ public void Login() {
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Secure_50px.png"))); // NOI18N
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 50, 50));
 
-        jTextField2.setBackground(new java.awt.Color(102, 0, 0));
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField2.setText("Enter Password");
-        jTextField2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
-        jTextField2.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jTextField2FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jTextField2FocusLost(evt);
-            }
-        });
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 260, 40));
-
         jLabel13.setFont(new java.awt.Font("Roboto", 0, 17)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Password:");
@@ -218,7 +198,7 @@ public void Login() {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 250, 40));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 380, 250, 40));
 
         jButton2.setBackground(new java.awt.Color(255, 0, 0));
         jButton2.setFont(new java.awt.Font("Segoe UI Historic", 0, 15)); // NOI18N
@@ -237,6 +217,19 @@ public void Login() {
         jLabel11.setText("Login Page");
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 150, 30));
 
+        jTextField2.setBackground(new java.awt.Color(102, 0, 0));
+        jTextField2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
+        jTextField2.setPhColor(new java.awt.Color(255, 255, 255));
+        jTextField2.setPlaceholder("Enter password");
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 260, 40));
+
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 590, 840));
 
         setSize(new java.awt.Dimension(1000, 609));
@@ -249,7 +242,6 @@ public void Login() {
 
     
     private void jTextField1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusGained
-        // TODO add your handling code here:
     if (jTextField1.getText().equals("Enter Username")) {
         jTextField1.setText(""); // Clear the placeholder
         jTextField1.setForeground(Color.white); // Set text color to white
@@ -262,26 +254,6 @@ public void Login() {
         jTextField1.setForeground(Color.GRAY);
     } 
     }//GEN-LAST:event_jTextField1FocusLost
-
-    private void jTextField2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField2FocusGained
-        // TODO add your handling code here:
-    if (jTextField2.getText().equals("Enter Password")) {
-        jTextField2.setText(""); // Clear the placeholder
-        jTextField2.setForeground(Color.white);
-        }
-    }//GEN-LAST:event_jTextField2FocusGained
-
-    private void jTextField2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField2FocusLost
-        // TODO add your handling code here:
-    if (jTextField2.getText().isEmpty()) {
-        jTextField2.setText("Enter Password"); // Restore the placeholder
-        jTextField2.setForeground(Color.GRAY);
-        }
-    }//GEN-LAST:event_jTextField2FocusLost
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if(validateLogin()){
@@ -300,6 +272,10 @@ public void Login() {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -355,7 +331,7 @@ public void Login() {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private rojerusan.RSPasswordTextPlaceHolder jTextField2;
     // End of variables declaration//GEN-END:variables
 
     private static class PreparedStatement {

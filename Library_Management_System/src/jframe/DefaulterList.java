@@ -4,14 +4,10 @@
  */
 package jframe;
 
-import com.mysql.cj.MysqlType;
-import com.sun.jdi.connect.spi.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.util.Date;
 import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
-import static jframe.DBConnection.con;
 
 /**
  *
@@ -39,7 +35,7 @@ public void setIssueBookDetailsToTable() {
         Class.forName("com.mysql.jdbc.Driver");
         java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library_ms", "root", "");
         java.sql.PreparedStatement pst = con.prepareStatement("select * from issue_book_details where due_date < ? and status = ?");
-        pst.setDate(1, sqlTodaysDate);  // Use the java.sql.Date object here
+        pst.setDate(1, sqlTodaysDate);
         pst.setString(2, "pending");
         ResultSet rs = pst.executeQuery();
         
