@@ -242,7 +242,11 @@ public void Login() {
 
     
     private void jTextField1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusGained
+<<<<<<< HEAD
     if (jTextField1.getText().equals("Enter Username")) {
+=======
+    if (jTextField1.getText().equals(" Enter Username")) {
+>>>>>>> parent of 8c54c3e (modify jtextfield1/username ph)
         jTextField1.setText(""); // Clear the placeholder
         jTextField1.setForeground(Color.white); // Set text color to white
     }
@@ -250,7 +254,11 @@ public void Login() {
 
     private void jTextField1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusLost
     if (jTextField1.getText().isEmpty()) {
+<<<<<<< HEAD
         jTextField1.setText("Enter Username"); 
+=======
+        jTextField1.setText(" Enter Username"); 
+>>>>>>> parent of 8c54c3e (modify jtextfield1/username ph)
         jTextField1.setForeground(Color.GRAY);
     } 
     }//GEN-LAST:event_jTextField1FocusLost
