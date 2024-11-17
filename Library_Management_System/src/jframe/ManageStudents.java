@@ -379,6 +379,7 @@ public class ManageStudents extends javax.swing.JFrame {
 
             },
             new String [] {
+<<<<<<< OURS
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -2688,6 +2689,9 @@ public class ManageStudents extends javax.swing.JFrame {
 =======
                 "Book ID", "Name", "Author", "Quantity"
 
+=======
+                "Book ID", "Name", "Author", "Quantity"
+>>>>>>> THEIRS
             }
         ));
         tbl_studentDetails.setColorBackgoundHead(new java.awt.Color(153, 0, 0));
