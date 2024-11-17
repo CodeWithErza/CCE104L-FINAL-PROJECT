@@ -494,6 +494,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 1d36eed (last commit)
                     <Column editable="true" title="College" type="java.lang.Object"/>
@@ -521,6 +522,10 @@
                     <Column editable="true" title="Author" type="java.lang.Object"/>
                     <Column editable="true" title="Quantity" type="java.lang.Object"/>
 >>>>>>> parent of ad8d49d (commit)
+=======
+                    <Column editable="true" title="Author" type="java.lang.Object"/>
+                    <Column editable="true" title="Quantity" type="java.lang.Object"/>
+>>>>>>> parent of e4cbac0 (added icons for sort)
                   </Table>
                 </Property>
                 <Property name="colorBackgoundHead" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
