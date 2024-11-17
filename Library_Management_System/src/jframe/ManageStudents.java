@@ -386,10 +386,14 @@ public class ManageStudents extends javax.swing.JFrame {
             new String [] {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "Student ID", "Name", "College", "Program"
 =======
                 "Student ID", "Name", "Program", "s"
 >>>>>>> ad8d49d079e8c13eb871b8843e3ca00740ab8283
+=======
+                "Book ID", "Name", "Author", "Quantity"
+>>>>>>> parent of ad8d49d (commit)
 =======
                 "Book ID", "Name", "Author", "Quantity"
 >>>>>>> parent of ad8d49d (commit)

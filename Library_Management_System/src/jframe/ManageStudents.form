@@ -495,12 +495,17 @@
                     <Column editable="true" title="Name" type="java.lang.Object"/>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <Column editable="true" title="College" type="java.lang.Object"/>
                     <Column editable="true" title="Program" type="java.lang.Object"/>
 =======
                     <Column editable="true" title="Program" type="java.lang.Object"/>
                     <Column editable="true" title="s" type="java.lang.Object"/>
 >>>>>>> ad8d49d079e8c13eb871b8843e3ca00740ab8283
+=======
+                    <Column editable="true" title="Author" type="java.lang.Object"/>
+                    <Column editable="true" title="Quantity" type="java.lang.Object"/>
+>>>>>>> parent of ad8d49d (commit)
 =======
                     <Column editable="true" title="Author" type="java.lang.Object"/>
                     <Column editable="true" title="Quantity" type="java.lang.Object"/>
