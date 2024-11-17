@@ -190,9 +190,6 @@ public class ManageStudents extends javax.swing.JFrame {
         tbl_studentDetails = new rojerusan.RSTableMetro();
         jLabel1 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -202,11 +199,11 @@ public class ManageStudents extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 51, 51));
-        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(null));
+        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel4.setBackground(new java.awt.Color(255, 51, 51));
-        jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(null));
+        jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel8.setFont(new java.awt.Font("Verdana", 0, 17)); // NOI18N
@@ -357,11 +354,11 @@ public class ManageStudents extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, 830));
 
-        jPanel3.setBackground(new java.awt.Color(255, 248, 232));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel6.setBackground(new java.awt.Color(255, 51, 51));
-        jPanel6.setBorder(javax.swing.BorderFactory.createBevelBorder(null));
+        jPanel6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel13.setFont(new java.awt.Font("Verdana", 0, 35)); // NOI18N
@@ -376,14 +373,13 @@ public class ManageStudents extends javax.swing.JFrame {
 
         jPanel3.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 0, 103, 42));
 
-        jScrollPane2.setBackground(new java.awt.Color(255, 248, 232));
-
         tbl_studentDetails.setBackground(new java.awt.Color(204, 204, 204));
         tbl_studentDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -397,6 +393,9 @@ public class ManageStudents extends javax.swing.JFrame {
 =======
                 "Book ID", "Name", "Author", "Quantity"
 >>>>>>> parent of ad8d49d (commit)
+=======
+                "Book ID", "Name", "Author", "Quantity"
+>>>>>>> parent of e4cbac0 (added icons for sort)
             }
         ));
         tbl_studentDetails.setColorBackgoundHead(new java.awt.Color(153, 0, 0));
@@ -411,7 +410,7 @@ public class ManageStudents extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(tbl_studentDetails);
 
-        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, 630, 390));
+        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 630, 270));
 
         jLabel1.setBackground(new java.awt.Color(0, 112, 192));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
@@ -434,30 +433,6 @@ public class ManageStudents extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 390, 5));
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/setting.png"))); // NOI18N
-        jLabel3.setText("Sort By:");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 180, 100, 30));
-
-        jComboBox2.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Book ID", "Quantity" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 180, 120, -1));
-
-        jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ascending order", "Descending Order", " " }));
-        jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 180, 150, 30));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, 1260, 830));
 
@@ -564,15 +539,6 @@ public class ManageStudents extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_combo_deptActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -612,14 +578,11 @@ public class ManageStudents extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> combo_dept;
     private javax.swing.JComboBox<String> combo_program;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
