@@ -384,6 +384,7 @@ public class ManageStudents extends javax.swing.JFrame {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 1d36eed (last commit)
                 "Student ID", "Name", "College", "Program"
@@ -402,6 +403,9 @@ public class ManageStudents extends javax.swing.JFrame {
 >>>>>>> parent of e4cbac0 (added icons for sort)
 =======
 >>>>>>> parent of 1d36eed (last commit)
+=======
+                "Book ID", "Name", "Author", "Quantity"
+>>>>>>> parent of ad8d49d (commit)
             }
         ));
         tbl_studentDetails.setColorBackgoundHead(new java.awt.Color(153, 0, 0));
