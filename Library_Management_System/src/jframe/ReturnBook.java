@@ -249,7 +249,7 @@ public class ReturnBook extends javax.swing.JFrame {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 250, 90));
 
         jPanel4.setBackground(new java.awt.Color(255, 51, 51));
-        jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(null));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel8.setFont(new java.awt.Font("Verdana", 0, 17)); // NOI18N
@@ -283,7 +283,7 @@ public class ReturnBook extends javax.swing.JFrame {
         panel_main.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 200, 350, 5));
 
         jPanel8.setBackground(new java.awt.Color(255, 51, 51));
-        jPanel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel8.setBorder(javax.swing.BorderFactory.createBevelBorder(null));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel18.setFont(new java.awt.Font("Verdana", 0, 35)); // NOI18N
@@ -298,7 +298,6 @@ public class ReturnBook extends javax.swing.JFrame {
 
         panel_main.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 0, 103, 42));
 
-        txt_bookId.setBackground(new java.awt.Color(255, 255, 255));
         txt_bookId.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         txt_bookId.setForeground(new java.awt.Color(153, 153, 153));
         txt_bookId.setText("Enter Book ID");
@@ -331,7 +330,6 @@ public class ReturnBook extends javax.swing.JFrame {
         jLabel9.setText("Book ID :");
         panel_main.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 250, 110, 30));
 
-        txt_studentId.setBackground(new java.awt.Color(255, 255, 255));
         txt_studentId.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         txt_studentId.setForeground(new java.awt.Color(153, 153, 153));
         txt_studentId.setText("Enter Student ID");
