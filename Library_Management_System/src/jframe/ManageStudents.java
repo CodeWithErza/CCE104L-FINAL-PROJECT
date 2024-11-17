@@ -379,7 +379,7 @@ public class ManageStudents extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Book ID", "Name", "Author", "Quantity"
+                "Student ID", "Name", "Program", "s"
             }
         ));
         tbl_studentDetails.setColorBackgoundHead(new java.awt.Color(153, 0, 0));
