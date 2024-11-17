@@ -493,8 +493,13 @@
                   <Table columnCount="4" rowCount="0">
                     <Column editable="true" title="Student ID" type="java.lang.Object"/>
                     <Column editable="true" title="Name" type="java.lang.Object"/>
+<<<<<<< HEAD
                     <Column editable="true" title="College" type="java.lang.Object"/>
                     <Column editable="true" title="Program" type="java.lang.Object"/>
+=======
+                    <Column editable="true" title="Program" type="java.lang.Object"/>
+                    <Column editable="true" title="s" type="java.lang.Object"/>
+>>>>>>> ad8d49d079e8c13eb871b8843e3ca00740ab8283
                   </Table>
                 </Property>
                 <Property name="colorBackgoundHead" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">

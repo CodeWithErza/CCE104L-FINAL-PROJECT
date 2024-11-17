@@ -384,7 +384,11 @@ public class ManageStudents extends javax.swing.JFrame {
 
             },
             new String [] {
+<<<<<<< HEAD
                 "Student ID", "Name", "College", "Program"
+=======
+                "Student ID", "Name", "Program", "s"
+>>>>>>> ad8d49d079e8c13eb871b8843e3ca00740ab8283
             }
         ));
         tbl_studentDetails.setColorBackgoundHead(new java.awt.Color(153, 0, 0));
